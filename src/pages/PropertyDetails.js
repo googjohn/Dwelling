@@ -3,7 +3,7 @@ import { CardProperty } from "../components/CardProperty"
 export const PropertyDetails = () => {
   return (
     <>
-      <div id="property-details" className="container  mx-auto max-w-screen-xl bg-gray-100 border border-gray-200 duration-500 ease-out dark:bg-gray-800 dark:border-gray-700">
+      <div id="property-details" className="container  mx-auto max-w-screen bg-gray-100 border border-gray-200 duration-500 ease-out dark:bg-gray-800 dark:border-gray-700">
         <div className="flex justify-between uppercase font-medium text-lg text-gray-500">
           <div><i className="fa-solid fa-location-dot"></i> BGC, Taguig City</div>
           <div><p className="">Available</p></div>

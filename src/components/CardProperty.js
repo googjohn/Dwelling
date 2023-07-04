@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { UseSkeletonLoader } from "../hooks/UseSkeletonLoader"
-export const CardProperty = ({ message }) => {
+export const CardProperty = () => {
   return (
     <>
       <section id="card-property">

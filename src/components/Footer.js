@@ -173,9 +173,7 @@ export const Footer = () => {
           <li>
             <NavLink to="/about" className="py-1">About</NavLink>
           </li>
-          <li>
-            <NavLink to="/services" className="py-1">Services</NavLink>
-          </li>
+
           <li>
             <NavLink to="/featured-properties" className="py-1">Featured Properties</NavLink>
           </li>

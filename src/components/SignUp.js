@@ -17,7 +17,7 @@ export const SignUp = () => {
     }
   };
   return (
-    <div>
+    <div className="w-3xl">
       <h2>Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <input

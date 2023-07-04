@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ourteamLogo from '../assets/images/profile-pictures/ourteam.jpg';
 import ContentLoader from 'react-content-loader';
 import { Box } from '@chakra-ui/react';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,8 +16,8 @@ export const About = () => {
 
   return (
     <>
-
-      <div className='w-full blur-container py-10 mb-10'>
+      <Navbar />
+      <div className='w-full blur-container py-10 mb-40'>
         {isLoading ? (
           <ContentLoader
             rtl={true}
@@ -52,7 +54,7 @@ export const About = () => {
 
         ) : (
           <div className="relative h-screen container  mx-auto p-10 text-gray-900">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gold to-green rounded-md filter blur-3xl opacity-80 -z-10">
+            <div className="absolute top-0 left-0 w-full h-full  rounded-md filter blur-3xl opacity-80 -z-10">
             </div>
 
             <img src={ourteamLogo} className="hover:opacity-90 float-right rounded-2xl z-50   shadow-2xl md:w-1/2 object-cover ml-5 mb-5 w-full" alt="" />
@@ -95,6 +97,7 @@ export const About = () => {
         )}
 
       </div >
+      <Footer />
     </>
   );
 };

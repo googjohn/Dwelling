@@ -223,7 +223,7 @@ export const ContactUs = () => {
 
   return (
     <>
-      <Link
+      {/* <Link
         className="button-modal"
         style={{
           padding: "10px 20px",
@@ -242,7 +242,7 @@ export const ContactUs = () => {
         }}
       >
         Sign Up
-      </Link >
+      </Link > */}
       <Modal
         size="4xl"
         blockScrollOnMount={false}

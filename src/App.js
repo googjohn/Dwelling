@@ -62,6 +62,8 @@ import SendInquiries from "./components/BackendComponents/sampleSendInquiries";
 // import UpdateProperty from "./components/BackendComponents/updateProperty";
 import Sidebar from "./components/BackendComponents/Sidebar";
 import Main from "./components/BackendComponents/Main";
+import SearchProperty from "./pages/SearchProperty";
+// import PropertySearch from "./pages/Search";
 
 function App() {
 
@@ -94,6 +96,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/licensing' element={<Licensing />} />
           <Route path='/affiliates' element={<Affiliates />} />
+          <Route path='/search' element={<SearchProperty />} />
 
 
           <Route path='/pages' element={<CareerLayout />}>
@@ -237,15 +240,15 @@ function App() {
             }
           /> */}
         </Routes>
-        <Routes>
-          <Route path="/sign-up" element={<SignUp />} />
-          {/* <Route
+        {/* <Routes> */}
+        {/* <Route path="/sign-up" element={<SignUp />} /> */}
+        {/* <Route
             path="/sign-in"
             element={
               isAuthenticated(false) ? handleUnauthorizedAccess() : <Login />
             }
           /> */}
-        </Routes>
+        {/* </Routes> */}
       </Router>
     </div>
   );

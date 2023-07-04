@@ -1,7 +1,7 @@
 import Image from '../../assets/images/profile-pictures/ourteam.jpg';
 import { Footer } from '../../components/Footer';
 import { Navbar } from '../../components/Navbar';
-import { SkeletonLoader } from '../../components/SkeletonLoader';
+// import { SkeletonLoader } from '../../components/SkeletonLoader';
 
 export const Careers = () => {
   return (
@@ -19,7 +19,7 @@ export const Careers = () => {
             </div>
           </div>
         </div>
-        <SkeletonLoader />
+        {/* <SkeletonLoader /> */}
         <div className="md:w-1/2 flex justify-center items-center">
           <div className="p-4">
             <h2 className="text-5xl">Become part of our team!</h2>

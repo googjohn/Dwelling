@@ -2,9 +2,10 @@ import Logo from '../assets/images/logo-no-bg.png'
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
-import Search from '../pages/Search';
+import SearchProperty from '../pages/SearchProperty';
 
-export const Hero = () => {
+
+export default () => {
   const typedRef = useRef(null);
 
   useEffect(() => {
@@ -12,7 +13,6 @@ export const Hero = () => {
     const options = {
       strings: [
         'beautifully designed houses',
-        'seamlessly browse gorgeous condo units',
         'assistance for site viewing',
       ],
       typeSpeed: 100,
@@ -41,8 +41,11 @@ export const Hero = () => {
           <span id="typing-text" className="typed text-3xl ml-3" ref={typedRef}></span>
         </h2>
         <div className="actions flex flex-col justify-center md:justify-center md:flex-row md:flex-wrap">
-          <Link to='/carousel' className="btn-gallery-view">View Gallery</Link>
-          <button to='' className='btn-services'>{<Search />}</button>
+          <Link to='/carousel' className="relative btn-get-started"> <span className='invisible'>View Gallery</span> <span className='view'>View Gallery</span>
+          </Link>
+          <Link to=''
+            className="btn-services"
+          > {<SearchProperty />}</Link>
 
         </div>
 
@@ -51,4 +54,4 @@ export const Hero = () => {
       </div>
     </section>
   );
-}
+};

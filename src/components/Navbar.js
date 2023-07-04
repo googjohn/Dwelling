@@ -61,17 +61,19 @@ import { ContactUs } from '../pages/ContactUs'
 export const Navbar = () => {
   return (
     <>
-      <header>
+      <header className='sticky top-0 z-[1000]'>
         <nav className="bg-black/70 border-gray-200 dark:bg-gray-900">
+
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <Link id="logo-link" to="/" className="flex items-center">
               <img
+
                 src={Logo}
                 className="h-20 mr-3"
                 alt="OurLogo"
               />
 
-            </a>
+            </Link>
             <div className="flex md:order-2">
               <ContactUs />
               {/* <SignUp /> */}
@@ -112,9 +114,9 @@ export const Navbar = () => {
                 <li>
                   <NavLink to="/featured-properties" className="nav-link block text-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green transition duration-300 ease-in-out text-lg md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Featured Properties</NavLink>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink to="/condo" className="nav-link block text-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green transition duration-300 ease-in-out text-lg md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Condominiums</NavLink>
-                </li>
+                </li> */}
                 <li>
                   <NavLink to="/contact" className="nav-link block text-gray-100  hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green transition duration-300 ease-in-out text-lg md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</NavLink>
                 </li>
