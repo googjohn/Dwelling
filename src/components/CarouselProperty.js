@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 export const CarouselProperty = () => {
   return (
+    <>
     <div id="default-carousel" className="relative w-full -z-60" data-carousel="slide">
       <div className="relative h-screen overflow-hidden md:h-screen ">
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
@@ -104,6 +105,7 @@ export const CarouselProperty = () => {
         </span>
       </button>
     </div>
+</>
   )
 }
 
@@ -111,12 +113,12 @@ export const CarouselProperty = () => {
 
 
 // export const CarouselProperty = () => {
-//   // const { isOpen, onOpen, onClose } = useDisclosure();
-
-//   return (
-//     <>
-
-//       <Carousel className=""
+  //   // const { isOpen, onOpen, onClose } = useDisclosure();
+  
+  //   return (
+    //     <>
+    
+    //       <Carousel className=""
 //         autoplay={true}
 //         autoplayDelay={4000}
 //         transition={{ type: "ease-out", duration: .5 }}

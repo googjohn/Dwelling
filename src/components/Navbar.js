@@ -75,7 +75,7 @@ export const Navbar = () => {
 
             </Link>
             <div className="flex md:order-2">
-              <ContactUs />
+              {/* <ContactUs /> */}
               {/* <SignUp /> */}
 
 

@@ -5,6 +5,7 @@ import Image2 from "../../assets/images/profile-pictures/jeric.jpeg";
 import Image3 from "../../assets/images/profile-pictures/jake.jpeg";
 import Image4 from "../../assets/images/profile-pictures/victor.jpeg";
 import { Navbar } from "../../components/Navbar";
+import { ContactUs } from "../ContactUs";
 
 const people = [
   {
@@ -34,7 +35,7 @@ export const Ourteam = () => {
   return (
     <>
       <Navbar />
-      <div className=" flex-wrap  content-center py-24 sm:py-32">
+      <div className=" flex-wrap  content-center pt-10 pb-24 sm:py-32">
         <div className="mx-auto grid  gap-x-11 gap-y-3  xl:grid-cols-2">
           <div className="max-auto">
             <p className="text-5xl pt-12  font-bold pb-0 flex justify-center tracking-tight text-gray-900 sm:text-4xl">Our Team</p>
@@ -50,7 +51,7 @@ export const Ourteam = () => {
                     <img className="h-24 w-24 border-gold rounded-full " src={person.imageUrl} alt="" />
                     <div>
                       <h3 className="text-base  font-bold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                      <p className="text-sm font-semibold leading-6 text-gold">{person.role}</p>
+                      <p className="text-sm font-semibold leading-6 text-gray-700">{person.role}</p>
 
                     </div>
                   </div>
@@ -60,6 +61,7 @@ export const Ourteam = () => {
           </div>
         </div>
       </div>
+      <ContactUs />
       <Footer />
     </>
   )

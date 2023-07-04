@@ -1,14 +1,18 @@
 import { CardProperty } from "../components/CardProperty"
+import { Footer } from "../components/Footer"
+import { Navbar } from "../components/Navbar"
+import { ContactUs } from "./ContactUs"
 
 export const PropertyDetails = () => {
   return (
     <>
+      <Navbar />
       <div id="property-details" className="container  mx-auto max-w-screen bg-gray-100 border border-gray-200 duration-500 ease-out dark:bg-gray-800 dark:border-gray-700">
-        <div className="flex justify-between uppercase font-medium text-lg text-gray-500">
+        <div className="flex justify-between uppercase px-4 pt-4 font-medium text-lg text-gray-500">
           <div><i className="fa-solid fa-location-dot"></i> BGC, Taguig City</div>
           <div><p className="">Available</p></div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between p-4 pb-2 pt-0">
           <a href="#" className="hover:text-green transition duration-500 ease-in-out mb-3 text-3xl font-medium text-gray-800 dark:text-gray-400 block">
             Inside of a Modern Voluptuous BGC, Taguig City
           </a>
@@ -186,6 +190,8 @@ export const PropertyDetails = () => {
           <CardProperty />
         </div>
       </div>
+      <ContactUs />
+      <Footer />
     </>
   )
 }

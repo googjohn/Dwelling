@@ -4,6 +4,7 @@ import ContentLoader from 'react-content-loader';
 import { Box } from '@chakra-ui/react';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import { ContactUs } from './ContactUs';
 
 export const About = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -97,6 +98,7 @@ export const About = () => {
         )}
 
       </div >
+      <ContactUs />
       <Footer />
     </>
   );

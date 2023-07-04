@@ -24,13 +24,13 @@ import { ContactUs } from "./pages/ContactUs";
 
 // layout
 import { RootLayout } from "./layouts/RootLayout";
-import { CareerLayout } from "./layouts/CareerLayout";
+import { CareerLayout } from "./layouts/CareersLayout";
 import { CardPropertyList } from "./components/CardPropertyList";
 import { PropertyDetails } from "./pages/PropertyDetails";
 import { FeaturedProperty } from "./pages/FeaturedProperty";
 import TermsAndConditionsModal from "./pages/TermsAndConditionsModal.js";
 import { Licensing } from "./pages/Licensing";
-import { Affiliates } from "./pages/Affiliates";
+// import { Affiliates } from "./pages/Affiliates";
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -95,11 +95,11 @@ function App() {
           {/* <Route path='/contact' element={<ContactUs />} /> */}
           <Route path='/about' element={<About />} />
           <Route path='/licensing' element={<Licensing />} />
-          <Route path='/affiliates' element={<Affiliates />} />
+          {/* <Route path='/affiliates' element={<Affiliates />} /> */}
           <Route path='/search' element={<SearchProperty />} />
 
 
-          <Route path='/pages' element={<CareerLayout />}>
+          <Route path='/careers' element={<CareerLayout />}>
           </Route>
 
 

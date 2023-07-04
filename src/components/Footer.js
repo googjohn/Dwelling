@@ -54,10 +54,10 @@ export const Footer = () => {
 
                       <Link to="/careers" className='py-1'>Careers</Link>
                     </li>
-                    <li className="item-list-a">
+                    {/* <li className="item-list-a">
 
                       <Link to="/affiliates" className='py-1'>Affiliates</Link>
-                    </li>
+                    </li> */}
 
                   </ul>
                 </div>

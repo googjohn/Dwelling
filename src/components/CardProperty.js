@@ -9,7 +9,7 @@ export const CardProperty = () => {
           <div className="absolute top-2 left-2 z-20">
             <button className="px-3 py-1 rounded-full bg-gray-300/50 font-medium text-gray-700 hover:bg-gray-300/80"><i className="fa-solid fa-location-dot"></i> Location</button>
           </div>
-          <Link to="#" className="relative inline-block overflow-hidden">
+          <Link to="/property-details" className="relative inline-block overflow-hidden">
             <div className="aspect-w-16 aspect-h-9">
               <img className="z-10 object-cover w-full h-full rounded-t-md transform transition duration-500 ease-in-out hover:scale-110 hover:shadow-lg" src="https://www.presello.com/wp-content/uploads/2022/09/29134-2.jpg" alt="" />
             </div>

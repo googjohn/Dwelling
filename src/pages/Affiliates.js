@@ -17,14 +17,11 @@ import POWEREDBY4 from '../assets/images/affiliates/FLOWBITE.png'
 import POWEREDBY5 from '../assets/images/affiliates/REACT.png'
 import POWEREDBY6 from '../assets/images/affiliates/NODEJS.png'
 import POWEREDBY7 from '../assets/images/affiliates/MONGODB.png'
-import { Footer } from '../components/Footer'
-import { Navbar } from '../components/Navbar'
 
 
 export const Affiliates = () => {
     return (
         <>
-            <Navbar />
             <div id='affiliates' className='relative mx-auto container text-left justify-center py-8'>
                 <h3 className=' text-3xl font-semibold text-center pt-9'>Our Affiliates</h3>
                 <div className='flex flex-wrap content-center '>
@@ -134,7 +131,6 @@ export const Affiliates = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

@@ -41,8 +41,8 @@ export default () => {
           <span id="typing-text" className="typed text-3xl ml-3" ref={typedRef}></span>
         </h2>
         <div className="actions flex flex-col justify-center md:justify-center md:flex-row md:flex-wrap">
-          <Link to='/carousel' className="relative btn-get-started"> <span className='invisible'>View Gallery</span> <span className='view'>View Gallery</span>
-          </Link>
+          <a href='#default-carousel' className="relative btn-get-started"> <span className='invisible'>View Gallery</span> <span className='view'>View Gallery</span>
+          </a>
           <Link to=''
             className="btn-services"
           > {<SearchProperty />}</Link>

@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import { CardPropertyList } from "../components/CardPropertyList"
 import { Navbar } from "../components/Navbar"
 import { Footer } from "../components/Footer"
+import { ContactUs } from "./ContactUs"
 
 export const FeaturedProperty = () => {
   return (
@@ -11,6 +12,7 @@ export const FeaturedProperty = () => {
       <main>
         <Outlet />
       </main>
+      <ContactUs />
       <Footer />
     </>
   )
