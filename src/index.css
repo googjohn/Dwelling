@@ -1,13 +1,412 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --logo-color: #c8b568;
+  --primary-color: #229b50;  
+}
+
+/* navbar  */
+#nav-bar {
+  position: sticky;
+  top: 0;
+  /* border-bottom: 1px solid var(--logo-color); */
+  /* padding: 10px 0; */
+  /* height: 100px; */
+  backdrop-filter: blur(8px);
+  /* background: linear-gradient(353deg, rgba(34,155,80,1) 0%, rgba(200,181,104,1) 100%);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.8); */
+}
+
+/* underline anchor hover effect */
+/* a {
+  padding: 10px 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a::before,
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: var(--logo-color);
+  transition: width .3s ease-out;
+}
+a::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+a:not(#nav-logo, #hero a, #default-carousel a, #card-property a, #affiliates a, #property-details a):hover::before,
+a:not(#nav-logo, #hero a, #default-carousel a, #card-property a, #affiliates a, #property-details a):hover::after {
+  width: 100%;
+} */
+
+/* #nav-bar img:first-of-type {
+  width: 100%;
+}
+
+a.active {
+  color: var(--primary-color);
+} */
+
+/* .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+} */
+
+.button-hover:hover {
+  background-color: var(--primary-color);
+}
+
+.btn-carousel {
+  padding:15px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn-carousel-search {
+  padding: 15px 20px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-services:hover {
+  border: 2px solid white;
+}
+#nav-bar a {
+  padding: 5px 0;
+}
+
+#nav-bar a:hover {
+  transition: .5s ease-out;
+}
+
+/* ================== { hero } ================== */
+/* hero */
+#hero {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/images/bg-hero-main.jpg) top center;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-logo {
+  margin: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+#hero .hero-logo img {
+  max-width: 100%;
+}
+
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.5);
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#hero h1 {
+  margin: 30px 0 10px 0;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* body {
+  overflow:hidden;
+} */
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 45px;
+    line-height: 36px;
+  }
+  #hero .hero-logo {
+    max-width: 350px;
+  }
+  .btn-get-started, .btn-services {
+    width: 300px;
+    align-self: center;
+  }
+}
+
+#hero h2 {
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+#hero h2 span {
+  color: #fff;
+  transition: 0.3s;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+}
+
+#hero .actions a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0;
+  /* transition: 0.5s; */
+  margin: 10px;
+}
+
+.actions .btn-get-started {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+  
+}
+
+.actions .btn-get-started:hover {
+  background: none;
+  border: 2px solid #fff;
+  /* border: 2px solid var(--logo-color); */
+  color: #fff;
+}
+
+.actions .btn-services {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.actions .btn-services:hover {
+  background: var(--primary-color);
+  /* border: 2px solid var(--primary-color); */
+  /* border: 2px solid var(--logo-color); */
+  /* color: #c8b568; */
+}
+
+
+
+/* overlay */
+/* .overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 27%,
+    rgba(0, 0, 0, 0.5) 90%
+  );
+}
+
+.overlay * {
+  z-index: 10;
+} */
+
+/* ==================== { carousel } ===================== */
+/* carousel indicator */
+#carousel-indicator > button {
+  /* background: var(--primary-color); */
+  height: 8px;
+  width: 20px;
+  border-radius: 10px;
+}
+/* #carousel-indicator button:nth-of-type(1) {
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+#carousel-indicator button:nth-of-type(2) {
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+#carousel-indicator button:nth-of-type(3) {
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+#carousel-indicator button:nth-of-type(4) {
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+#carousel-indicator button:nth-of-type(5) {
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 20px;
+  border-radius: 10px;
+} */
+
+#carousel-inner > #carousel-item {
+  position: relative;
+  max-height: 100%;
+}
+#carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.text-custom-green {
+  color: var(--primary-color);
+}
+
+.quote-price {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.quote-price:hover {
+  background: var(--primary-color);
+  border: 2px solid #fff;
+  transition: .5s;
+}
+
+.quote-price-sm {
+  padding: 5px 10px;
+}
+
+/* ================== { about } =================== */
+.about-page {
+  background: rgb(34,155,80);
+background: linear-gradient(353deg, rgba(34,155,80,1) 0%, rgba(200,181,104,1) 100%);
+}
+
+.blur-container {
+  position: relative;
+}
+
+.blur-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  z-index: -1;
+}
+
+
+/* ================== { footer } ================== */
+@media screen and (max-width: 650px) {
+  #footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer-nav div {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  #footer-nav, #footer-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer-content {
+    text-align: center;
+  }
+}
+
+footer a:hover {
+  color: var(--primary-color);
+  transition: .5s all ease-out;
+}
+#footer-legal button {
+  line-height: 2;
+}
+#footer-legal button:hover {
+  color: var(--primary-color);
+  transition: .5s all ease-out;
+}
+
+/* back to top button */
+#back-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: white;
+  z-index: 999;
+  transform: translateY(24px);
+  transition: .5s all ease-in-out;
+}
+
+#back-to-top:hover {
+  border: 2px solid white;
+  transition: .3s ease-in-out;
+  opacity: 1;
+}
+
+#grid-affiliates div, #grid-power div {
+  border: 1px solid rgb(212, 212, 212);
+  box-shadow: 3px rgba(104, 104, 104, 0.5);
+  border-radius: 8px;
+  background: #fff;
+}
+
+#grid-affiliates div:hover, #grid-power div:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
